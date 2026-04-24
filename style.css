@@ -1,0 +1,202 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f9;
+}
+
+/* ================= LOGIN PAGE ================= */
+.center-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #4f46e5, #9333ea);
+}
+
+.login-card {
+  background: white;
+  padding: 30px;
+  width: 320px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+input {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #4f46e5;
+}
+
+/* ================= BUTTONS ================= */
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3730a3;
+}
+
+/* ================= DASHBOARD LAYOUT ================= */
+.layout {
+  display: flex;
+  height: 100vh;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar {
+  width: 220px;
+  background: #111827;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 20px;
+}
+
+.sidebar p {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.sidebar p:hover {
+  background: #1f2937;
+}
+
+.sidebar p.active {
+  background: #4f46e5;
+}
+
+.sidebar button {
+  margin-top: 20px;
+  background: red;
+}
+
+.sidebar button:hover {
+  background: darkred;
+}
+
+/* ================= MAIN ================= */
+.main {
+  flex: 1;
+  padding: 20px;
+}
+
+/* ================= TOPBAR ================= */
+.topbar {
+  background: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar input {
+  width: 60%;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* ================= CARD ================= */
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* ================= TASK GRID ================= */
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+/* ================= TASK CARD ================= */
+.task {
+  background: white;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.task:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* ================= TASK STATUS ================= */
+.status {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.status.todo {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.status.progress {
+  background: #ffedd5;
+  color: #c2410c;
+}
+
+.status.done {
+  background: #dcfce7;
+  color: #166534;
+}
+
+/* ================= TASK BUTTONS ================= */
+.task button {
+  margin: 5px 3px;
+  padding: 6px;
+  width: 45%;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/* EDIT */
+.task button:first-of-type {
+  background: orange;
+  color: white;
+}
+
+/* DELETE */
+.task button:last-of-type {
+  background: red;
+  color: white;
+}

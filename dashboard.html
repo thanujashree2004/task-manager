@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="loadTasks(); loadDashboard();">
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>TaskApp</h2>
+
+    <p onclick="showPage('dashboard')">🏠 Dashboard</p>
+    <p onclick="showPage('tasks')">📋 Tasks</p>
+    <p onclick="showPage('create')">➕ Create Task</p>
+    <p onclick="showPage('logs')">📊 Audit Logs</p>
+    <p onclick="showPage('profile')">👤 Profile</p>
+
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <!-- TOPBAR (NO SEARCH HERE) -->
+    <div class="topbar">
+      <h2>Task Manager App</h2>
+      <span>👤 User</span>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div id="dashboardPage">
+      <h2>Dashboard</h2>
+      <p>Loading stats...</p>
+    </div>
+
+    <!-- TASKS (SEARCH ONLY HERE) -->
+    <div id="tasksPage" style="display:none;">
+
+      <h2>Tasks</h2>
+
+      <input
+        placeholder="Search tasks..."
+        onkeyup="searchTask(this.value)"
+        style="width:100%; padding:10px; margin-bottom:10px; border-radius:8px;"
+      >
+
+      <div id="tasks"></div>
+    </div>
+
+    <!-- CREATE -->
+    <div id="createPage" style="display:none;">
+      <h2>Create Task</h2>
+
+      <input id="title" placeholder="Title">
+      <input id="desc" placeholder="Description">
+
+      <button onclick="addTask()">Create</button>
+    </div>
+
+    <!-- LOGS -->
+    <div id="logsPage" style="display:none;">
+      <h2>Audit Logs</h2>
+      <div id="logs"></div>
+    </div>
+
+    <!-- PROFILE -->
+    <div id="profilePage" style="display:none;">
+      <h2>Profile</h2>
+      <p>Loading profile...</p>
+    </div>
+
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
